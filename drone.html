@@ -4,142 +4,271 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Explore professional drone videography, aerial cinematography and creative drone projects by Ridma Chamuditha.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Aerial Videography | Ridma Chamuditha</title>
 
+    <meta name="description"
+        content="Explore aerial videography and cinematic drone projects by Ridma Chamuditha, professional drone pilot and content creator in Sri Lanka.">
+
     <link rel="stylesheet" href="style.css">
 
-    <script src="script.js" defer></script>
+    <style>
+        /* AERIAL VIDEOGRAPHY PAGE */
+
+        .drone-page {
+            min-height: 100vh;
+            padding: 130px 8% 80px;
+            background: #080808;
+            color: #ffffff;
+        }
+
+        .drone-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .drone-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .drone-header h1 {
+            color: #d4af37;
+            font-size: clamp(32px, 5vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        .drone-header p {
+            color: #bbbbbb;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* VIDEO GALLERY */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 350px), 1fr)
+            );
+            gap: 30px;
+        }
+
+        .video-card {
+            background: #141414;
+            border: 1px solid #292929;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+
+        .youtube-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000000;
+        }
+
+        .youtube-video iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 25px;
+        }
+
+        .video-info h3 {
+            font-size: 21px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .video-info p {
+            color: #aaaaaa;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .youtube-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: #d4af37;
+            color: #080808;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .youtube-btn:hover {
+            background: #f0cf65;
+            color: #080808;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 45px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .drone-page {
+                padding: 110px 20px 60px;
+            }
+
+            .drone-header {
+                margin-bottom: 35px;
+            }
+
+            .video-info {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- NAVIGATION -->
-    <header class="site-header">
 
-        <a href="index.html#home" class="logo">
-            RIDMA<span>.</span>
-        </a>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                Ridma<span>.</span>
+            </a>
 
-        <nav>
-            <a href="index.html#home">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#education">Education</a>
-            <a href="index.html#skills">Skills</a>
-            <a href="index.html#projects">Projects</a>
-            <a href="index.html#contact">Contact</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
         </nav>
-
     </header>
 
-    <main>
+    <!-- AERIAL VIDEOGRAPHY -->
 
-        <!-- DRONE PROJECTS -->
-        <section class="project-page">
+    <main class="drone-page">
 
-            <div class="container">
+        <div class="drone-container">
 
-                <!-- BACK TO PROJECTS -->
-                <a href="index.html#projects"
-                   class="back-link">
-                    ← Back to Projects
-                </a>
+            <div class="drone-header">
 
-                <!-- PAGE HEADING -->
-                <div class="section-heading reveal">
+                <h1>Aerial Videography</h1>
 
-                    <p class="section-label">
-                        MY CREATIVE DRONE WORK
-                    </p>
+                <p>
+                    Discover the world from a different
+                    perspective through cinematic drone
+                    videography, creative aerial shots,
+                    and professional visual storytelling.
+                </p>
 
-                    <h2>
-                        Aerial <span>Videography.</span>
-                    </h2>
+            </div>
 
-                    <p class="page-description"
-                       style="margin: 20px auto 0;">
+            <!-- VIDEO GALLERY -->
 
-                        Explore my professional drone
-                        videography, aerial cinematography,
-                        creative drone films and unique
-                        aerial perspectives.
+            <div class="video-grid">
 
-                    </p>
+                <!-- YOUTUBE VIDEO 01 -->
 
-                </div>
+                <div class="video-card">
 
-                <!-- FACEBOOK VIDEO GALLERY -->
-                <div class="video-grid">
+                    <div class="youtube-video">
 
-                    <!-- DRONE VIDEO 01 -->
-                    <article class="video-card reveal">
+                        <iframe
+                            src="https://www.youtube.com/embed/-tmv1Ka-LMc"
+                            title="Ridma Chamuditha - Aerial Videography"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
 
-                        <div class="facebook-video">
+                    </div>
 
-                            <iframe
-                                title="Drone Aerial Cinematography"
-                                src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2F100070010802414%2Fvideos%2F262368679504897%2F&amp;show_text=false&amp;width=560&amp;t=0"
-                                width="560"
-                                height="314"
-                                style="border:none;overflow:hidden"
-                                scrolling="no"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                allowfullscreen
-                                loading="lazy">
-                            </iframe>
+                    <div class="video-info">
 
-                        </div>
+                        <h3>Cinematic Drone Videography</h3>
 
-                        <div class="video-card-content">
+                        <p>
+                            Experience breathtaking aerial
+                            perspectives and cinematic visuals
+                            captured through professional
+                            drone videography.
+                        </p>
 
-                            <h3>
-                                Drone Aerial Cinematography
-                            </h3>
+                        <a
+                            href="https://www.youtube.com/watch?v=-tmv1Ka-LMc"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="youtube-btn">
 
-                            <p>
-                                Professional drone videography
-                                and cinematic aerial footage
-                                captured from unique perspectives.
-                            </p>
+                            Watch on YouTube
 
-                            <a
-                                href="https://www.facebook.com/100070010802414/videos/262368679504897/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="drone-watch-btn">
+                        </a>
 
-                                Watch on Facebook ↗
-
-                            </a>
-
-                        </div>
-
-                    </article>
+                    </div>
 
                 </div>
 
             </div>
 
-        </section>
+            <!-- BACK TO PORTFOLIO -->
+
+            <a href="index.html#projects" class="back-link">
+                ← Back to Projects
+            </a>
+
+        </div>
 
     </main>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- FLOATING WHATSAPP -->
 
-        <p>
-            © <span id="current-year">2026</span>
-            Ridma Chamuditha.
-            All Rights Reserved.
-        </p>
+    <a
+        href="https://wa.me/94740625003"
+        class="floating-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
 
-    </footer>
+        <svg
+            viewBox="0 0 32 32"
+            fill="currentColor"
+            aria-hidden="true">
+
+            <path d="M16 3a12.8 12.8 0 0 0-11 19.3L3 29l6.9-1.8A12.8 12.8 0 1 0 16 3zm0 2.5a10.3 10.3 0 1 1-5.3 19.1l-.5-.3-3.6 1 1-3.5-.3-.6A10.3 10.3 0 0 1 16 5.5zm-5.2 4.3c-.4 0-.9.2-1.2.6-.4.4-1.5 1.4-1.5 3.4s1.5 4 1.7 4.3c.2.3 2.9 4.6 7.2 6.2 3.5 1.4 4.3 1.1 5.1 1 .8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9-.1-.2-.4-.4-.9-.6l-2.7-1.3c-.4-.2-.7-.3-1 .2-.3.4-1.1 1.3-1.4 1.6-.2.3-.5.3-.9.1-.5-.2-1.9-.7-3.6-2.3-1.3-1.2-2.2-2.7-2.4-3.2-.2-.4 0-.7.2-.9l.7-.9c.2-.3.3-.5.5-.8.1-.3 0-.6-.1-.8l-1.2-2.9c-.3-.7-.6-.7-1-.7h-.6z"/>
+
+        </svg>
+
+    </a>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
+
